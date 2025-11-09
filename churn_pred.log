@@ -1,0 +1,73 @@
+2025-11-04 22:05:49.154392 | INFO | Loading data...
+2025-11-04 22:05:49.154392 | ERROR | Error loading data: [Errno 2] No such file or directory: 'C:\\Users\\SHARMILA\\Downloads\\Telco_Churn_Project\\WA_Fn-UseC_-Telco-Customer-Churn.csv'
+2025-11-04 22:05:49.154392 | ERROR | Feature engineering failed: 'NoneType' object has no attribute 'columns'
+2025-11-04 22:05:49.154392 | ERROR | Feature selection failed: 'NoneType' object has no attribute 'drop'
+2025-11-04 22:05:49.154392 | ERROR | Visualization failed: Could not interpret value `gender` for `x`. Value is a string, but `data` was not passed.
+2025-11-04 22:09:21.686133 | INFO | Loading data...
+2025-11-04 22:09:21.687429 | ERROR | Error loading data: [Errno 2] No such file or directory: 'WA_Fn-UseC_-Telco-Customer-Churn.csv'
+2025-11-04 22:09:21.687429 | ERROR | Feature engineering failed: 'NoneType' object has no attribute 'columns'
+2025-11-04 22:09:21.687429 | ERROR | Feature selection failed: 'NoneType' object has no attribute 'drop'
+2025-11-04 22:09:21.687429 | ERROR | Visualization failed: Could not interpret value `gender` for `x`. Value is a string, but `data` was not passed.
+2025-11-04 22:12:20.626256 | INFO | Loading data...
+2025-11-04 22:12:20.626256 | ERROR | Error loading data: [Errno 13] Permission denied: 'C:\\Users\\SHARMILA\\Downloads\\Telco_Churn_Project'
+2025-11-04 22:12:20.626256 | ERROR | Feature engineering failed: 'NoneType' object has no attribute 'columns'
+2025-11-04 22:12:20.626256 | ERROR | Feature selection failed: 'NoneType' object has no attribute 'drop'
+2025-11-04 22:12:20.631359 | ERROR | Visualization failed: Could not interpret value `gender` for `x`. Value is a string, but `data` was not passed.
+2025-11-04 22:21:47.624417 | INFO | Loading data...
+2025-11-04 22:21:47.695928 | ERROR | Error loading data: 'charmap' codec can't encode character '\u2705' in position 36: character maps to <undefined>
+2025-11-04 22:21:47.738073 | ERROR | Feature engineering failed: 'charmap' codec can't encode character '\u2705' in position 36: character maps to <undefined>
+2025-11-04 22:21:48.434548 | ERROR | Feature selection failed: 'charmap' codec can't encode character '\u2705' in position 36: character maps to <undefined>
+2025-11-04 22:22:05.058512 | ERROR | Visualization failed: 'charmap' codec can't encode character '\U0001f4ca' in position 36: character maps to <undefined>
+2025-11-04 22:23:49.414433 | INFO | Loading data...
+2025-11-04 22:23:49.476717 | INFO | ✅ Data loaded successfully!
+2025-11-04 22:23:49.536242 | INFO | ✅ Feature engineering completed!
+2025-11-04 22:23:50.255667 | INFO | ✅ Feature selection completed successfully!
+2025-11-04 22:23:58.273443 | INFO | 📊 Visualization completed!
+2025-11-04 22:26:22.392383 | INFO | Loading data...
+2025-11-04 22:26:22.428148 | INFO | ✅ Data loaded successfully!
+2025-11-04 22:26:22.461532 | INFO | ✅ Feature engineering completed!
+2025-11-04 22:26:23.064834 | INFO | ✅ Feature selection completed successfully!
+2025-11-04 22:26:23.066589 | INFO | 📊 Visualization completed!
+2025-11-04 22:40:18.632984 | INFO | Loading data...
+2025-11-04 22:40:18.735132 | INFO | ✅ Data loaded and missing values handled successfully!
+2025-11-04 22:40:18.736182 | INFO | ✅ Data loaded successfully!
+2025-11-04 22:40:18.768069 | INFO | ✅ Feature engineering completed!
+2025-11-04 22:40:19.439894 | INFO | ✅ Feature selection completed successfully!
+2025-11-04 22:40:19.442038 | INFO | 📊 Visualization completed!
+2025-11-04 22:45:54.033171 | INFO | Loading data...
+2025-11-04 22:45:54.096841 | INFO |  Data loaded and missing values handled successfully!
+2025-11-04 22:45:54.096841 | INFO |  Data loaded successfully!
+2025-11-04 22:45:54.128246 | INFO |  Feature engineering completed!
+2025-11-04 22:45:54.729556 | INFO | Feature selection completed successfully!
+2025-11-04 22:45:54.730577 | INFO |  Visualization completed!
+2025-11-04 22:45:54.730577 | INFO | Starting model development...
+2025-11-04 22:45:56.201719 | INFO | Model trained successfully! Accuracy: 0.7918
+2025-11-04 22:45:56.247386 | INFO |  Model saved as churn_model.pkl
+2025-11-04 22:56:14.028670 | INFO | Loading data...
+2025-11-04 22:56:14.133669 | INFO |  Data loaded and missing values handled successfully!
+2025-11-04 22:56:14.135673 | INFO |  Data loaded successfully!
+2025-11-04 22:56:14.168872 | INFO |  Feature engineering completed!
+2025-11-04 22:56:14.768663 | INFO | Feature selection completed successfully!
+2025-11-04 22:56:14.769609 | INFO |  Visualization completed!
+2025-11-04 22:56:14.769609 | INFO | Starting model development...
+2025-11-04 22:56:15.634035 | INFO | Model trained successfully! Accuracy: 0.7918
+2025-11-04 22:56:15.685557 | INFO |  Model saved as churn_model.pkl
+2025-11-04 22:56:15.689465 | INFO | 🔮 Loading model for prediction...
+2025-11-04 22:56:15.763592 | ERROR | Prediction failed: X has 10 features, but RandomForestClassifier is expecting 23 features as input.
+2025-11-04 23:01:58.007613 | INFO | Loading data...
+2025-11-04 23:01:58.073232 | INFO |  Data loaded and missing values handled successfully!
+2025-11-04 23:01:58.074576 | INFO |  Data loaded successfully!
+2025-11-04 23:01:58.112994 | INFO |  Feature engineering completed!
+2025-11-04 23:01:58.695549 | INFO | Feature selection completed successfully!
+2025-11-04 23:01:58.712806 | INFO |  Visualization completed!
+2025-11-04 23:01:58.712806 | INFO | Starting model development...
+2025-11-04 23:01:59.481927 | INFO | Model trained successfully! Accuracy: 0.7918
+2025-11-04 23:01:59.522824 | INFO |  Model saved as churn_model.pkl
+2025-11-04 23:01:59.539139 | INFO | 🔮 Loading model for prediction...
+2025-11-04 23:01:59.607272 | ERROR | Prediction failed: X has 10 features, but RandomForestClassifier is expecting 23 features as input.
+2025-11-04 23:09:06.490097 | INFO | Loading data...
+2025-11-04 23:09:06.554963 | INFO |  Data loaded and missing values handled successfully!
+2025-11-04 23:09:06.554963 | INFO |  Data loaded successfully!
+2025-11-04 23:09:06.596054 | INFO |  Feature engineering completed!
+2025-11-04 23:09:07.163162 | INFO | Feature selection completed successfully!
+2025-11-04 23:09:07.163162 | INFO |  Visualization completed!

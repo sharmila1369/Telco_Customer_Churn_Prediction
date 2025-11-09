@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 Telco Customer Churn Prediction</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ABE2, #5563DE);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: white;
+            max-width: 1100px;
+            margin: 40px auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            padding: 30px 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2C3E50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 25px;
+        }
+
+        button:hover {
+            background: #1b5e9e;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .low { color: green; }
+        .moderate { color: orange; }
+        .high { color: red; }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>📈 Telco Customer Churn Prediction Dashboard</h1>
+
+    <form action="/predict" method="post">
+
+        <h2>👤 Customer Information</h2>
+        <div class="form-group">
+            <label>Senior Citizen:</label>
+            <select name="SeniorCitizen" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Tenure (months):</label>
+            <input type="number" name="tenure" placeholder="e.g. 12" required>
+        </div>
+
+        <div class="form-group">
+            <label>Monthly Charges:</label>
+            <input type="number" step="any" name="MonthlyCharges" placeholder="e.g. 70" required>
+        </div>
+
+        <div class="form-group">
+            <label>Total Charges:</label>
+            <input type="number" step="any" name="TotalCharges" placeholder="e.g. 3500" required>
+        </div>
+
+        <h2>👨‍💼 Demographics</h2>
+        <div class="form-group">
+            <label>Gender:</label>
+            <select name="gender_Male" required>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Partner:</label>
+            <select name="Partner_Yes" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Dependents:</label>
+            <select name="Dependents_Yes" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <h2>📞 Services</h2>
+        <div class="form-group"><label>Phone Service:</label><select name="PhoneService_Yes" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Multiple Lines:</label><select name="MultipleLines_Yes" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Internet Service (DSL):</label><select name="InternetService_DSL" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Internet Service (Fiber Optic):</label><select name="InternetService_Fiber optic" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Online Security:</label><select name="OnlineSecurity_Yes" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Online Backup:</label><select name="OnlineBackup_Yes" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Device Protection:</label><select name="DeviceProtection_Yes" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Tech Support:</label><select name="TechSupport_Yes" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Streaming TV:</label><select name="StreamingTV_Yes" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Streaming Movies:</label><select name="StreamingMovies_Yes" required><option value="0">No</option><option value="1">Yes</option></select></div>
+
+        <h2>💳 Contract & Billing</h2>
+        <div class="form-group"><label>Contract (One year):</label><select name="Contract_One year" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Contract (Two year):</label><select name="Contract_Two year" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Paperless Billing:</label><select name="PaperlessBilling_Yes" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Payment - Bank Transfer:</label><select name="PaymentMethod_Bank transfer (automatic)" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Payment - Credit Card:</label><select name="PaymentMethod_Credit card (automatic)" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Payment - Electronic Check:</label><select name="PaymentMethod_Electronic check" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Payment - Mailed Check:</label><select name="PaymentMethod_Mailed check" required><option value="0">No</option><option value="1">Yes</option></select></div>
+
+        <h2>🔢 Additional Encoded Features</h2>
+        <div class="form-group"><label>SeniorCitizen_Yes:</label><select name="SeniorCitizen_Yes" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Gender_Female:</label><select name="gender_Female" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Partner_No:</label><select name="Partner_No" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>Dependents_No:</label><select name="Dependents_No" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>MultipleLines_No:</label><select name="MultipleLines_No" required><option value="0">No</option><option value="1">Yes</option></select></div>
+        <div class="form-group"><label>TechSupport_No:</label><select name="TechSupport_No" required><option value="0">No</option><option value="1">Yes</option></select></div>
+
+        <button type="submit">🔍 Predict Churn</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        <h2>🔮 Prediction Result:</h2>
+        <p class="{% if 'Low' in prediction %}low{% elif 'Moderate' in prediction %}moderate{% else %}high{% endif %}">
+            {{ prediction }}
+        </p>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
+
+
+
