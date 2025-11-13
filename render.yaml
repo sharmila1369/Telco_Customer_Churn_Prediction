@@ -1,10 +1,11 @@
 services:
   - type: web
-    name: telco-customer-churn
+    name: telco-churn
     env: python
-    plan: free
+    region: singapore
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.10
+      - key: PORT
+        value: 10000
+
