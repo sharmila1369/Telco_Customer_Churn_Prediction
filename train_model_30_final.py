@@ -148,7 +148,12 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 print("Training model...")
-model = RandomForestClassifier(n_estimators=300, random_state=42)
+model = RandomForestClassifier(
+    n_estimators=80,
+    max_depth=12,
+    random_state=42
+)
+
 model.fit(X_scaled, y)
 
 print("Saving new model files...")
