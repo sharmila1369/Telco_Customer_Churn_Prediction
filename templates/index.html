@@ -1,0 +1,209 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>📊 Telco Customer Churn Prediction</title>
+  <style>
+    body{background:linear-gradient(135deg,#74ABE2,#5563DE);font-family:Segoe UI,Roboto,Arial;color:#222;margin:0;padding:0}
+    .container{background:#fff;max-width:900px;margin:30px auto;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.18);padding:28px 30px}
+    h1{text-align:center;color:#2C3E50;margin:0 0 18px}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .field{display:flex;flex-direction:column;margin-bottom:6px}
+    label{font-weight:600;font-size:13px;color:#2a3a4a;margin-bottom:6px}
+    input[type="text"],input[type="number"],select{padding:8px;border-radius:6px;border:1px solid #dcdfe8;font-size:14px}
+    .wide{grid-column:1/3}
+    .predict-btn{grid-column:1/3;background:#1f86b7;color:#fff;border:none;padding:12px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:6px}
+    .predict-btn:hover{background:#16668a}
+    .result{grid-column:1/3;margin-top:18px;padding-top:10px;border-top:2px solid #e6eef8;text-align:center;font-size:18px}
+    .low{color:green}.high{color:red}.moderate{color:orange}
+    .section-title{grid-column:1/3;color:#1177b8;font-weight:700;margin-top:8px;margin-bottom:6px}
+    /* small responsive */
+    @media(max-width:780px){form{grid-template-columns:1fr} .wide{grid-column:auto}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📈 Telco Customer Churn Prediction Dashboard</h1>
+
+    <form action="/predict" method="post">
+      <div class="section-title">👤 Customer Info</div>
+
+      <div class="field">
+        <label>Senior Citizen</label>
+        <select name="SeniorCitizen">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Tenure (months)</label>
+        <input name="tenure" type="number" step="1" placeholder="e.g. 12" />
+      </div>
+
+      <div class="field">
+        <label>Monthly Charges</label>
+        <input name="MonthlyCharges" type="number" step="any" placeholder="e.g. 70.0" />
+      </div>
+
+      <div class="field">
+        <label>Total Charges</label>
+        <input name="TotalCharges" type="number" step="any" placeholder="e.g. 350.0" />
+      </div>
+
+      <div class="field">
+        <label>Gender</label>
+        <select name="gender">
+          <option>Female</option>
+          <option>Male</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Partner</label>
+        <select name="Partner">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Dependents</label>
+        <select name="Dependents">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+      </div>
+
+      <div class="section-title">📞 Services</div>
+
+      <div class="field">
+        <label>Phone Service</label>
+        <select name="PhoneService">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Multiple Lines</label>
+        <select name="MultipleLines">
+          <option>No</option>
+          <option>No phone service</option>
+          <option>Yes</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Internet Service</label>
+        <select name="InternetService">
+          <option>DSL</option>
+          <option>Fiber optic</option>
+          <option>No</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Online Security</label>
+        <select name="OnlineSecurity">
+          <option>No</option>
+          <option>Yes</option>
+          <option>No internet service</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Online Backup</label>
+        <select name="OnlineBackup">
+          <option>No</option>
+          <option>Yes</option>
+          <option>No internet service</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Device Protection</label>
+        <select name="DeviceProtection">
+          <option>No</option>
+          <option>Yes</option>
+          <option>No internet service</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Tech Support</label>
+        <select name="TechSupport">
+          <option>No</option>
+          <option>Yes</option>
+          <option>No internet service</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Streaming TV</label>
+        <select name="StreamingTV">
+          <option>No</option>
+          <option>Yes</option>
+          <option>No internet service</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Streaming Movies</label>
+        <select name="StreamingMovies">
+          <option>No</option>
+          <option>Yes</option>
+          <option>No internet service</option>
+        </select>
+      </div>
+
+      <div class="section-title">💳 Contract & Billing</div>
+
+      <div class="field">
+        <label>Contract</label>
+        <select name="Contract">
+          <option>Month-to-month</option>
+          <option>One year</option>
+          <option>Two year</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Paperless Billing</label>
+        <select name="PaperlessBilling">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+      </div>
+
+      <div class="field wide">
+        <label>Payment Method</label>
+        <select name="PaymentMethod">
+          <option>Bank transfer (automatic)</option>
+          <option>Credit card (automatic)</option>
+          <option>Electronic check</option>
+          <option>Mailed check</option>
+        </select>
+      </div>
+
+      <button type="submit" class="predict-btn">🔍 Predict Churn</button>
+
+      <div class="result">
+        <h2>🔮 Prediction Result:</h2>
+        {% if prediction %}
+          <p class="{% if 'Low' in prediction %}low{% elif 'High' in prediction %}high{% else %}moderate{% endif %}">
+            {{ prediction }}
+          </p>
+        {% else %}
+          <p style="color:#666">Fill the form and click <strong>Predict Churn</strong></p>
+        {% endif %}
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
+
+
