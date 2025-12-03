@@ -117,10 +117,11 @@ Build a SHAP explainability dashboard
 
 Add automated retraining pipeline
 
-👩‍💻 Author
+---
 
-V. Sharmilambika
-AI/ML & Data Science Enthusiast
-Project completed under Vihara Tech – The Skill Union
-📧 Email: sharmilambikavenna@gmail.com
+## 👩‍💻 Author
+**V. Sharmilambika**  
+AI/ML & Data Science Enthusiast  
+Email: sharmilambika@gmail.com  
+
 
