@@ -141,11 +141,17 @@ For any support or questions, contact:
 📩 <a href="mailto:sharmilambikavenna@gmail.com">sharmilambikavenna@gmail.com
 </a>
 
-🧑‍💻 Author
-⭐ V. SHARMILAMBIKA
+## 🧑‍💻 Author
 
-AI/ML & Data Science Enthusiast
+**V. SHARMILAMBIKA**  
+AI/ML & Data Science Enthusiast  
 
-📧 Email: <a href="mailto:sharmila.ai.ds@gmail.com">sharmila.ai.ds@gmail.com
-</a>
+📧 **Email:** [sharmila.ai.ds@gmail.com](mailto:sharmila.ai.ds@gmail.com)
+
+---
+
+## 🆘 Support  
+For any support or questions, contact:  
+📩 **[sharmilambikavenna@gmail.com](mailto:sharmilambikavenna@gmail.com)**
+
 
