@@ -140,18 +140,28 @@ Links
 For any support or questions, contact:
 📩 <a href="mailto:sharmilambikavenna@gmail.com">sharmilambikavenna@gmail.com
 </a>
+## 🆘 Support
 
-## 🧑‍💻 Author
+For any support or questions, contact:  
+📩 **[sharmilambikavenna@gmail.com](mailto:sharmilambikavenna@gmail.com)**
 
-**V. SHARMILAMBIKA**  
-AI/ML & Data Science Enthusiast  
+## 🆘 Support
 
-📧 **Email:** [sharmila.ai.ds@gmail.com](mailto:sharmila.ai.ds@gmail.com)
+For any support or questions, contact:  
+📩 **[sharmilambikavenna@gmail.com](mailto:sharmilambikavenna@gmail.com)**
 
 ---
 
-## 🆘 Support  
-For any support or questions, contact:  
-📩 **[sharmilambikavenna@gmail.com](mailto:sharmilambikavenna@gmail.com)**
+## 🧑‍💻 Author
+
+### ⭐ **V. SHARMILAMBIKA**  
+AI/ML & Data Science Enthusiast  
+
+📧 📧 Email: sharmilambikavenna@gmail.com
+
+
+---
+
+
 
 
