@@ -122,3 +122,5 @@ Add automated retraining pipeline
 V. Sharmilambika
 AI/ML & Data Science Enthusiast
 Project completed under Vihara Tech – The Skill Union
+📧 Email: sharmilambikavenna@gmail.com
+
