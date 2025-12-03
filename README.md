@@ -120,7 +120,7 @@ Add automated retraining pipeline
 ---
 
 ## 👩‍💻 Author
-**V. Sharmilambika**  
+ V. Sharmilambika 
 AI/ML & Data Science Enthusiast  
 Email: sharmilambika@gmail.com  
 
