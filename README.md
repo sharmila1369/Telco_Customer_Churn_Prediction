@@ -135,20 +135,12 @@ Links
 
 📝 Notebook: EDA + Model Building
 
-🆘 Support
 
-For any support or questions, contact:
-📩 <a href="mailto:sharmilambikavenna@gmail.com">sharmilambikavenna@gmail.com
-</a>
-## 🆘 Support
+
+##  Support
 
 For any support or questions, contact:  
-📩 **[sharmilambikavenna@gmail.com](mailto:sharmilambikavenna@gmail.com)**
-
-## 🆘 Support
-
-For any support or questions, contact:  
-📩 **[sharmilambikavenna@gmail.com](mailto:sharmilambikavenna@gmail.com)**
+📩 **[sharmilambikavenna@gmail.com]
 
 ---
 
