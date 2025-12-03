@@ -1,75 +1,103 @@
-# 📞 Telco Customer Churn Prediction Using Machine Learning  
-An end-to-end AI-powered churn prediction system that identifies customers likely to leave a telecom service provider.  
-This project includes data preprocessing, feature engineering, model building, performance comparison, and a user-friendly prediction app.
+# Telco Customer Churn Prediction Using Machine Learning
+
+This project focuses on predicting telecom customer churn using Machine Learning.  
+It includes preprocessing, feature engineering, model training, evaluation, and a Streamlit app for real-time churn prediction.
 
 ---
 
-## 📌 Project Overview
-Telecom companies lose revenue when customers stop using their services (churn).  
-This project predicts churn using the **Telco Customer Churn dataset**, applying multiple ML models and generating actionable insights.
+## Installation
 
-The workflow includes:
-- Exploratory Data Analysis (EDA)
-- Feature Engineering & Transformations
-- Handling missing values (KNN, Random Sampling, Iterative, Quantile Transform)
-- Model training & evaluation
-- Deployment with Streamlit
+```bash
+pip install -r requirements.txt
+To run the Streamlit app:
 
----
+streamlit run app.py
+Skills Used
 
-## 📂 Dataset
-- **Rows:** 7043  
-- **Columns:** 21  
-- Contains customer demographics, contract details, payment info, services used, and churn label.
+Python
 
-Main preprocessing:
-- Dropped `customerID`
-- Categorical encoding (Label & One-Hot)
-- Scaling numeric features (StandardScaler)
-- Imputation of missing values
-- Variable transformations 
+Numpy
 
----
+Pandas
 
-## 🧠 Machine Learning Models
-The following models were trained and compared:
+Matplotlib
 
-| Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
-|-------|----------|-----------|--------|-----|---------|
-| Logistic Regression | 81.2% | 0.79 | 0.77 | 0.78 | 0.84 |
-| Decision Tree | 83.6% | 0.81 | 0.80 | 0.81 | 0.85 |
-| **Random Forest (Final Model)** | **86.5%** | **0.84** | **0.83** | **0.84** | **0.89** |
+Seaborn
 
-### ✅ Final Production Model: **Random Forest**
-Random Forest was selected as the final model because:
+Scikit-learn
 
-- It achieved the **highest stable accuracy (86.5%)**
-- It generalizes well and avoids overfitting  
-- It provides strong feature importance insights  
-- It performs better than Logistic Regression and Decision Tree  
-- It is robust for real-world deployment
+Random Forest Classifier
 
-## 🔍 Key Business Insights
-- Month-to-month contract → highest churn  
-- High monthly charges → high churn risk  
-- Electronic check → most unstable payment group  
-- Tenure < 12 months → ~47% churn  
-- Long-term contracts → lower churn  
-- Auto-pay customers → more loyal  
-- Add-on services (Security, TechSupport) reduce churn  
+Data Preprocessing
 
-## 📊 Dashboard / Deployment
-A Streamlit web app is included to predict churn instantly based on:
-- Tenure  
-- Contract type  
-- Payment method  
-- Monthly & Total charges  
-- Internet service details  
-- Demographic info  
+Feature Engineering
+
+Streamlit
+
+Feature Engineering Steps
+
+Data collection
+
+Handling missing values
+
+Encoding categorical variables
+
+Scaling numerical features
+
+Outlier detection
+
+Variable transformation
+
+Selecting best features
+
+Model building
+
+Model evaluation
+
+Saving the model
+
+Deploying using Streamlit
+| Model                           | Accuracy  | Precision | Recall   | F1 Score | ROC-AUC  |
+| ------------------------------- | --------- | --------- | -------- | -------- | -------- |
+| Logistic Regression             | 81.2%     | 0.79      | 0.77     | 0.78     | 0.84     |
+| Decision Tree                   | 83.6%     | 0.81      | 0.80     | 0.81     | 0.85     |
+| **Random Forest (Final Model)** | **86.5%** | **0.84**  | **0.83** | **0.84** | **0.89** |
+Final chosen model: Random Forest
+
+Key Insights
+
+Month-to-month contracts have highest churn
+
+High monthly charges increase churn probability
+
+Electronic check users churn more
+
+Tenure < 12 months → high risk
+
+Long-term contracts reduce churn
+
+Add-on services improve customer retention
+
+Dashboard / App
+
+A Streamlit application is provided to predict churn based on:
+
+Tenure
+
+Contract type
+
+Payment method
+
+Monthly & Total charges
+
+Internet service
+
+Customer demographics
 
 Run locally:
-```bash
+
 streamlit run app.py
+
 Project Structure
 Telco_Customer_Churn_Prediction/
 │
@@ -84,49 +112,40 @@ Telco_Customer_Churn_Prediction/
 │   └── telco_customer_churn.csv
 ├── requirements.txt
 └── README.md
-How to Install & Run
-1. Install dependencies
-pip install -r requirements.txt
 
-2. Run Streamlit App
-streamlit run app.py
+Dataset
 
-🛠 Technologies Used
+Telco Customer Churn Dataset (IBM Sample Dataset)
 
-Python
+Contains:
 
-Pandas, NumPy
+Demographics
 
-Matplotlib, Seaborn
+Account Information
 
-Scikit-Learn
+Services Used
 
-XGBoost
+Payment Methods
 
-SHAP
+Churn Label
 
-Streamlit
+Links
 
-⭐ Future Enhancements
+📊 Streamlit App (Local): streamlit run app.py
 
-Deploy on AWS / Azure / Render
+📝 Notebook: EDA + Model Building
 
-Include Deep Learning (ANN) model
+🆘 Support
 
-Build a SHAP explainability dashboard
+For any support or questions, contact:
+📩 <a href="mailto:sharmilambikavenna@gmail.com">sharmilambikavenna@gmail.com
+</a>
 
-Add automated retraining pipeline
+🧑‍💻 Author
+⭐ V. SHARMILAMBIKA
 
----
----
+AI/ML & Data Science Enthusiast
 
-# ⭐ **AUTHOR**
-### 👩‍💻 **V. SHARMILAMBIKA**
-AI/ML & Data Science Enthusiast  
-
-📧 **Email:** <a href="mailto:sharmilambikavenna@gmail.com">sharmilambikavenna@gmail.com</a>
-
----
-
-
+📧 Email: <a href="mailto:sharmila.ai.ds@gmail.com">sharmila.ai.ds@gmail.com
+</a>
 
