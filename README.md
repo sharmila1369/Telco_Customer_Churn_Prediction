@@ -38,12 +38,16 @@ The following models were trained and compared:
 |-------|----------|-----------|--------|-----|---------|
 | Logistic Regression | 81.2% | 0.79 | 0.77 | 0.78 | 0.84 |
 | Decision Tree | 83.6% | 0.81 | 0.80 | 0.81 | 0.85 |
-| Random Forest | 86.5% | 0.84 | 0.83 | 0.84 | 0.89 |
-| **XGBoost (Best)** | **88.2%** | **0.86** | **0.85** | **0.86** | **0.91** |
+| **Random Forest (Final Model)** | **86.5%** | **0.84** | **0.83** | **0.84** | **0.89** |
 
-**XGBoost** is the final production model due to highest accuracy & AUC.
+### ✅ Final Production Model: **Random Forest**
+Random Forest was selected as the final model because:
 
----
+- It achieved the **highest stable accuracy (86.5%)**
+- It generalizes well and avoids overfitting  
+- It provides strong feature importance insights  
+- It performs better than Logistic Regression and Decision Tree  
+- It is robust for real-world deployment
 
 ## 🔍 Key Business Insights
 - Month-to-month contract → highest churn  
@@ -53,8 +57,6 @@ The following models were trained and compared:
 - Long-term contracts → lower churn  
 - Auto-pay customers → more loyal  
 - Add-on services (Security, TechSupport) reduce churn  
-
----
 
 ## 📊 Dashboard / Deployment
 A Streamlit web app is included to predict churn instantly based on:
@@ -68,8 +70,7 @@ A Streamlit web app is included to predict churn instantly based on:
 Run locally:
 ```bash
 streamlit run app.py
-
-##Project Structure
+Project Structure
 Telco_Customer_Churn_Prediction/
 │
 ├── app/
@@ -83,7 +84,6 @@ Telco_Customer_Churn_Prediction/
 │   └── telco_customer_churn.csv
 ├── requirements.txt
 └── README.md
-
 How to Install & Run
 1. Install dependencies
 pip install -r requirements.txt
@@ -122,4 +122,3 @@ Add automated retraining pipeline
 V. Sharmilambika
 AI/ML & Data Science Enthusiast
 Project completed under Vihara Tech – The Skill Union
-
