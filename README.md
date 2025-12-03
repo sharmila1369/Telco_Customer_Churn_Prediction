@@ -27,7 +27,7 @@ Main preprocessing:
 - Categorical encoding (Label & One-Hot)
 - Scaling numeric features (StandardScaler)
 - Imputation of missing values
-- Variable transformations (Log, Power, RankGauss)
+- Variable transformations 
 
 ---
 
