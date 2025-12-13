@@ -1,159 +1,129 @@
-# Telco Customer Churn Prediction Using Machine Learning
+📊 Telco Customer Churn Prediction Using Machine Learning
+📌 Project Overview
 
-This project focuses on predicting telecom customer churn using Machine Learning.  
-It includes preprocessing, feature engineering, model training, evaluation, and a Streamlit app for real-time churn prediction.
+Customer churn is a critical challenge in the telecom industry. This project focuses on predicting whether a customer is likely to churn (leave the service) using Machine Learning techniques.
 
----
+The project covers the complete ML lifecycle, including:
 
-## Installation
+Data preprocessing
 
-```bash
-pip install -r requirements.txt
-To run the Streamlit app:
+Exploratory Data Analysis (EDA)
 
-streamlit run app.py
-Skills Used
+Feature engineering
 
-Python
+Model training & evaluation
 
-Numpy
+Deployment using a Streamlit web application for real-time predictions
 
-Pandas
+🚀 Features
 
-Matplotlib
+Predicts customer churn (Yes / No)
 
-Seaborn
+User-friendly Streamlit UI
 
-Scikit-learn
+Real-time prediction based on customer inputs
 
-Random Forest Classifier
+End-to-end ML workflow
 
-Data Preprocessing
+Well-structured and modular code
+
+🧠 Machine Learning Workflow
+
+Data Loading
+
+Data Cleaning & Preprocessing
+
+Exploratory Data Analysis (EDA)
 
 Feature Engineering
 
-Streamlit
+Model Training
 
-Feature Engineering Steps
+Model Evaluation
 
-Data collection
+Streamlit App Deployment
 
-Handling missing values
+🧪 Models Used
 
-Encoding categorical variables
+Logistic Regression
 
-Scaling numerical features
+Decision Tree
 
-Outlier detection
+Random Forest (Final Model)
 
-Variable transformation
+📈 Evaluation Metrics
 
-Selecting best features
+Accuracy
 
-Model building
+Precision
 
-Model evaluation
+Recall
 
-Saving the model
+F1-Score
 
-Deploying using Streamlit
-| Model                           | Accuracy  | Precision | Recall   | F1 Score | ROC-AUC  |
-| ------------------------------- | --------- | --------- | -------- | -------- | -------- |
-| Logistic Regression             | 81.2%     | 0.79      | 0.77     | 0.78     | 0.84     |
-| Decision Tree                   | 83.6%     | 0.81      | 0.80     | 0.81     | 0.85     |
-| **Random Forest (Final Model)** | **86.5%** | **0.84**  | **0.83** | **0.84** | **0.89** |
-Final chosen model: Random Forest
+ROC-AUC
 
-Key Insights
+🖥️ Streamlit Application
 
-Month-to-month contracts have highest churn
+The Streamlit app allows users to:
 
-High monthly charges increase churn probability
+Enter customer details
 
-Electronic check users churn more
+Predict churn probability
 
-Tenure < 12 months → high risk
+View prediction result instantly
 
-Long-term contracts reduce churn
-
-Add-on services improve customer retention
-
-Dashboard / App
-
-A Streamlit application is provided to predict churn based on:
-
-Tenure
-
-Contract type
-
-Payment method
-
-Monthly & Total charges
-
-Internet service
-
-Customer demographics
-
-Run locally:
-
+▶️ Run the Streamlit App (Local)
+pip install -r requirements.txt
 streamlit run app.py
 
-Project Structure
+🛠️ Technologies Used
+
+Python
+
+Pandas, NumPy
+
+Matplotlib, Seaborn
+
+Scikit-learn
+
+Streamlit
+
+📁 Project Structure
 Telco_Customer_Churn_Prediction/
 │
-├── app/
-│   └── app.py
+├── app.py                     # Streamlit application
+├── requirements.txt           # Project dependencies
+├── data/
+│   └── telco_customer_churn.csv
+├── notebooks/
+│   └── EDA_and_Model_Building.ipynb
 ├── models/
 │   ├── churn_model.pkl
 │   └── scaler.pkl
-├── notebooks/
-│   └── EDA_and_Model_Building.ipynb
-├── data/
-│   └── telco_customer_churn.csv
-├── requirements.txt
 └── README.md
 
-Dataset
+📊 Dataset
 
-Telco Customer Churn Dataset (IBM Sample Dataset)
+Public Telco Customer Churn Dataset
 
-Contains:
+Includes customer demographics, services, contract details, and churn label
 
-Demographics
+🎯 Outcome
 
-Account Information
+This project demonstrates how Machine Learning can be applied to:
 
-Services Used
+Identify customers at risk of churn
 
-Payment Methods
+Support data-driven business decisions
 
-Churn Label
+Improve customer retention strategies
 
-Links
+👩‍💻 Author
 
-📊 Streamlit App (Local): streamlit run app.py
+V. Sharmilambika
+AI/ML & Data Science Enthusiast
 
-📝 Notebook: EDA + Model Building
+📧 Email: sharmilambikavenna@gmail.com
 
-
-
-##  Support
-
-For any support or questions, contact:  
-📩 **[sharmilambikavenna@gmail.com]
-
----
-
-## 🧑‍💻 Author
-
-### ⭐ **V. SHARMILAMBIKA**  
-AI/ML & Data Science Enthusiast  
-
-📧 📧 Email: sharmilambikavenna@gmail.com
-
-
----
-
-
-
-
+🔗 GitHub: https://github.com/sharmila1369
